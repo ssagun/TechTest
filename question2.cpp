@@ -14,12 +14,13 @@ private:
         string item;
 
         while (getline(ss, item, '.')) {
+            if(item == "") result.push_back(0);
             result.push_back(stoi(item));
         }
 
         return result;
     }
-    
+
 public:
     static int compare(const string &version1, const string &version2) {
         vector<int> v1 = split(version1);
